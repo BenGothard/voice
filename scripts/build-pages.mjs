@@ -1,7 +1,8 @@
 /**
  * Build the GitHub Pages static demo.
- * Bundles src/browser/entry.ts (engine + mock data) into pages/bundle.js
- * and copies the Pages UI (pages/index.html, app.js, styles.css) into place.
+ * GitHub Pages branch deployment only allows / (root) or /docs — NOT /pages.
+ * So the Pages site lives in docs/ (index.html + app.js + styles.css + bundle.js).
+ * We also copy to pages/ for local reference.
  * Run: npm run build:pages
  */
 import { build } from 'esbuild';
@@ -12,8 +13,10 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.join(__dirname, '..');
+const docsDir = path.join(root, 'docs');
 const pagesDir = path.join(root, 'pages');
 
+fs.mkdirSync(docsDir, { recursive: true });
 fs.mkdirSync(pagesDir, { recursive: true });
 
 await build({
@@ -22,14 +25,18 @@ await build({
   platform: 'browser',
   format: 'iife',
   globalName: 'TPAAgent',
-  outfile: path.join(pagesDir, 'bundle.js'),
+  outfile: path.join(docsDir, 'bundle.js'),
   minify: false,
   sourcemap: false,
   target: ['es2022'],
 });
 
-// Ensure .nojekyll so GitHub Pages serves files starting with _ correctly
+// Copy bundle to pages/ too for local reference
+fs.copyFileSync(path.join(docsDir, 'bundle.js'), path.join(pagesDir, 'bundle.js'));
+
+// Ensure .nojekyll in both
+fs.writeFileSync(path.join(docsDir, '.nojekyll'), '');
 fs.writeFileSync(path.join(pagesDir, '.nojekyll'), '');
 
-console.log('Built pages/bundle.js for GitHub Pages');
-console.log('Pages site is in pages/ — index.html + app.js + styles.css + bundle.js');
+console.log('Built docs/bundle.js for GitHub Pages (Pages source must be /docs)');
+console.log('Pages site is in docs/ — index.html + app.js + styles.css + bundle.js');
