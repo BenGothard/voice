@@ -1,0 +1,987 @@
+[
+  {
+    "id": "01-claims-happy",
+    "language": "en",
+    "shouldContain": true,
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "Mike Bravo Romeo"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "CLM-9003",
+          "pending"
+        ],
+        "user": "claims status"
+      }
+    ]
+  },
+  {
+    "id": "02-eligibility",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "active",
+          "PPO Gold"
+        ],
+        "user": "am I eligible?"
+      }
+    ]
+  },
+  {
+    "id": "03-benefits-deductible",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "$350"
+        ],
+        "user": "how much deductible do I have left?"
+      }
+    ]
+  },
+  {
+    "id": "04-id-card",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "ID card",
+          "7 to 10"
+        ],
+        "user": "I need a new ID card"
+      }
+    ]
+  },
+  {
+    "id": "05-provider",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "Cardiology",
+          "in-network"
+        ],
+        "user": "find a cardiologist"
+      }
+    ]
+  },
+  {
+    "id": "06-prior-auth",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "PA-5001",
+          "approved"
+        ],
+        "user": "prior auth status"
+      }
+    ]
+  },
+  {
+    "id": "07-denied-claim",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1002"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1978-11-02"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85016"
+      },
+      {
+        "expect": [
+          "denied",
+          "Prior authorization"
+        ],
+        "user": "claims status"
+      }
+    ]
+  },
+  {
+    "id": "08-pending-claim",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "pending"
+        ],
+        "user": "claims status"
+      }
+    ]
+  },
+  {
+    "id": "09-high-deductible",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1003"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1992-07-21"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85281"
+      },
+      {
+        "expect": [
+          "$3,500",
+          "$2,700"
+        ],
+        "user": "benefits"
+      }
+    ]
+  },
+  {
+    "id": "10-out-of-network",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1008"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1958-08-23"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85020"
+      },
+      {
+        "expect": [
+          "denied",
+          "Out-of-network"
+        ],
+        "user": "claims status"
+      }
+    ]
+  },
+  {
+    "id": "11-ineligible",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1006"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1990-09-12"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85255"
+      },
+      {
+        "expect": [
+          "not active"
+        ],
+        "user": "am I eligible?"
+      }
+    ]
+  },
+  {
+    "id": "12-misheard-id",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "didn't find"
+        ],
+        "user": "MBR9999"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      }
+    ]
+  },
+  {
+    "id": "13-wrong-dob",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "doesn't match"
+        ],
+        "user": "1990-01-01"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      }
+    ]
+  },
+  {
+    "id": "14-wrong-zip",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "doesn't match"
+        ],
+        "user": "99999"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      }
+    ]
+  },
+  {
+    "expectEscalation": true,
+    "id": "15-appeal-escalate",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1002"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1978-11-02"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85016"
+      },
+      {
+        "expect": [
+          "connecting you to a representative"
+        ],
+        "user": "I want to appeal this denial"
+      }
+    ]
+  },
+  {
+    "expectEscalation": true,
+    "id": "16-angry-escalate",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "connecting you to a representative"
+        ],
+        "user": "This is terrible, I am so frustrated"
+      }
+    ]
+  },
+  {
+    "expectEscalation": true,
+    "id": "17-supervisor-escalate",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "connecting you to a representative"
+        ],
+        "user": "let me talk to a supervisor"
+      }
+    ]
+  },
+  {
+    "id": "18-emergency",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "911"
+        ],
+        "user": "I have chest pain"
+      }
+    ]
+  },
+  {
+    "id": "19-spanish-greeting",
+    "language": "es",
+    "turns": [
+      {
+        "expect": [
+          "n\u00famero de miembro"
+        ],
+        "user": "hola"
+      },
+      {
+        "expect": [
+          "fecha de nacimiento"
+        ],
+        "user": "MBR1002"
+      },
+      {
+        "expect": [
+          "c\u00f3digo postal"
+        ],
+        "user": "1978-11-02"
+      },
+      {
+        "expect": [
+          "verificada"
+        ],
+        "user": "85016"
+      },
+      {
+        "expect": [
+          "CLM-9102",
+          "denegado"
+        ],
+        "user": "estado de reclamos"
+      }
+    ]
+  },
+  {
+    "id": "20-spanish-benefits",
+    "language": "es",
+    "turns": [
+      {
+        "expect": [
+          "n\u00famero de miembro"
+        ],
+        "user": "hola"
+      },
+      {
+        "expect": [
+          "fecha de nacimiento"
+        ],
+        "user": "MBR1005"
+      },
+      {
+        "expect": [
+          "c\u00f3digo postal"
+        ],
+        "user": "1980-05-19"
+      },
+      {
+        "expect": [
+          "verificada"
+        ],
+        "user": "85009"
+      },
+      {
+        "expect": [
+          "deducible"
+        ],
+        "user": "beneficios"
+      }
+    ]
+  },
+  {
+    "id": "21-unknown-intent",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "didn't catch"
+        ],
+        "user": "what is the weather?"
+      }
+    ]
+  },
+  {
+    "id": "22-no-phi-before-auth",
+    "language": "en",
+    "mustNotContain": [
+      "$450",
+      "approved"
+    ],
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "what is my claim CLM-9001 status?"
+      }
+    ]
+  },
+  {
+    "expectEscalation": true,
+    "id": "23-verification-failed-escalate",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "didn't find"
+        ],
+        "user": "MBR9999"
+      },
+      {
+        "expect": [
+          "didn't find"
+        ],
+        "user": "MBR9998"
+      },
+      {
+        "expect": [
+          "connecting you to a representative"
+        ],
+        "user": "MBR9997"
+      }
+    ]
+  },
+  {
+    "id": "24-specific-claim",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "CLM-9001",
+          "$450"
+        ],
+        "user": "what about claim CLM-9001?"
+      }
+    ]
+  },
+  {
+    "id": "25-follow-up",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "CLM-9003"
+        ],
+        "user": "claims status"
+      },
+      {
+        "expect": [
+          "How can I help"
+        ],
+        "user": "yes"
+      },
+      {
+        "expect": [
+          "deductible"
+        ],
+        "user": "benefits"
+      }
+    ]
+  },
+  {
+    "id": "26-goodbye",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "1985-03-14"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      },
+      {
+        "expect": [
+          "Thank you for calling"
+        ],
+        "user": "goodbye"
+      }
+    ]
+  },
+  {
+    "id": "27-dob-format-slash",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "03/14/1985"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      }
+    ]
+  },
+  {
+    "id": "28-dob-format-words",
+    "language": "en",
+    "turns": [
+      {
+        "expect": [
+          "member ID"
+        ],
+        "user": "hello"
+      },
+      {
+        "expect": [
+          "date of birth"
+        ],
+        "user": "MBR1001"
+      },
+      {
+        "expect": [
+          "ZIP"
+        ],
+        "user": "March 14, 1985"
+      },
+      {
+        "expect": [
+          "verified"
+        ],
+        "user": "85004"
+      }
+    ]
+  }
+]
