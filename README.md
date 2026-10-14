@@ -1,5 +1,7 @@
 # TPA Voice Agent — MVP
 
+**Live demo (no install): https://bengothard.github.io/voice/** — open on your phone, press Call, try Sarah Johnson `MBR1001` / `1985-03-14` / `85004`. Runs entirely in your browser on mock data.
+
 A working voice agent for Third Party Administrators (TPAs) serving self-funded health plans. It handles the calls that eat up human support time — claims status, eligibility, benefits / deductible, ID cards, provider lookup, and prior auth — with verification, grounding, and clean human escalation.
 
 **This MVP runs entirely on mock TPA data. No API keys, no phone setup, no real PHI.**

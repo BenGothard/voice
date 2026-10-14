@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TPA Voice Agent — Demo Phone Call</title>
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">☎️ TPA Voice Agent <span class="badge">MVP • Mock Data • No API keys</span></div>
+  <div class="controls">
+    <label>Language
+      <select id="langSelect"><option value="en">English</option><option value="es">Español</option></select>
+    </label>
+    <label><input type="checkbox" id="ttsToggle" checked /> Voice on (browser TTS)</label>
+    <label><input type="checkbox" id="micToggle" /> Mic (Web Speech, if supported)</label>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="phone">
+    <div class="call-header">
+      <div class="avatar">📞</div>
+      <div>
+        <div class="call-title">Benefits Support</div>
+        <div class="call-sub" id="callStatus">Ready — press Call to start</div>
+        <div class="timer" id="timer">00:00</div>
+      </div>
+      <div class="call-actions">
+        <button id="callBtn" class="btn primary">📞 Call</button>
+        <button id="endBtn" class="btn danger" disabled>End</button>
+        <button id="transferBtn" class="btn" disabled>Transfer to human</button>
+      </div>
+    </div>
+
+    <div class="verification" id="verification">
+      <span id="verifyBadge">🔒 Not verified</span>
+      <span id="memberBadge"></span>
+    </div>
+
+    <div class="transcript" id="transcript">
+      <div class="hint">Press <b>Call</b> to start. Then type or speak. The agent will ask for your member ID first — it will not share any claim or benefits details until you are verified.<br/><br/>This is a static GitHub Pages demo — the same agent engine runs entirely in your phone's browser. No server, no API keys.</div>
+    </div>
+
+    <div class="typing" id="typing" hidden>Agent is thinking…</div>
+
+    <div class="composer">
+      <input id="input" placeholder="Type what the caller says… e.g. MBR1001" disabled />
+      <button id="micBtn" class="btn" title="Speak (Web Speech API)">🎤</button>
+      <button id="sendBtn" class="btn primary" disabled>Send</button>
+    </div>
+
+    <div class="suggested" id="suggested"></div>
+
+    <div class="demo-box">
+      <b>Try these demo members (copy DOB + ZIP):</b>
+      <div class="demo-grid">
+        <button class="demo-card" data-member="MBR1001" data-dob="1985-03-14" data-zip="85004"><b>Sarah Johnson</b><br/>ID: MBR1001<br/>DOB: 1985-03-14<br/>ZIP: 85004<br/><span>PPO Gold • 2 approved, 1 pending claim</span></button>
+        <button class="demo-card" data-member="MBR1002" data-dob="1978-11-02" data-zip="85016"><b>Carlos Mendoza 🇪🇸</b><br/>ID: MBR1002<br/>DOB: 1978-11-02<br/>ZIP: 85016<br/><span>HMO Silver • 1 denied claim (needs PA)</span></button>
+        <button class="demo-card" data-member="MBR1003" data-dob="1992-07-21" data-zip="85281"><b>Emily Chen</b><br/>ID: MBR1003<br/>DOB: 1992-07-21<br/>ZIP: 85281<br/><span>HDHP Bronze • High deductible</span></button>
+      </div>
+      <p class="small">More members: MBR1004–MBR1008 (see README in repo). Try: “claims status”, “benefits”, “eligibility”, “ID card”, “find a cardiologist”, “prior auth”. Try “I want to appeal” to see escalation.</p>
+    </div>
+  </section>
+
+  <aside class="side">
+    <section class="card">
+      <h3>🔍 Agent's work — live tool calls</h3>
+      <p class="small">Every dollar amount comes from a tool call, never from a guess. Watch what the agent looks up.</p>
+      <ul id="toolCalls" class="tool-list"><li class="muted">No tool calls yet.</li></ul>
+    </section>
+
+    <section class="card" id="escalationCard" hidden>
+      <h3>🚨 Escalation</h3>
+      <div id="escalationBody"></div>
+    </section>
+
+    <section class="card">
+      <h3>📋 Call summary + audit log</h3>
+      <button id="summaryBtn" class="btn">Refresh summary</button>
+      <pre id="summary" class="summary">No summary yet.</pre>
+    </section>
+
+    <section class="card">
+      <h3>📊 Analytics (this browser)</h3>
+      <button id="analyticsBtn" class="btn">Refresh analytics</button>
+      <pre id="analytics" class="summary">No data yet.</pre>
+    </section>
+  </aside>
+</main>
+
+<footer class="footer">Static GitHub Pages demo — runs entirely in your browser. Demo uses mock TPA data only. No real PHI, no real claims system, no phone calls.</footer>
+<script src="./bundle.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
